@@ -6,12 +6,12 @@ require "bigbang/rails/version"
 Gem::Specification.new do |spec|
   spec.name          = "bigbang-rails"
   spec.version       = Bigbang::Rails::VERSION
-  spec.authors       = ["David"]
+  spec.authors       = ["David Sanchez"]
   spec.email         = ["sanchez.dav90@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Ruby on Rails App Generator"
+  spec.description   = "You can create Ruby on Rails project with initial and necessary gems"
+  spec.homepage      = "https://www.bigbang-rails.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/Sanchezdav/bigbang-rails"
+    spec.metadata["changelog_uri"] = "https://github.com/Sanchezdav/bigbang-rails"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -36,7 +36,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 2.0"
+  spec.add_development_dependency "bundler", "~> 1.17.2"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "rubocop", "~> 0.67.2"
+  spec.add_development_dependency "sdoc", "~> 1.0"
+  spec.add_development_dependency "rubocop-performance"
+
+  spec.add_dependency "tty-prompt", "~> 0.18.1"
+  spec.add_dependency "slop", "~> 4.6.2"
 end
